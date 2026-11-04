@@ -1,5 +1,7 @@
 FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
+PR = "r1"
+
 SRC_URI += "file://0001-makefile-add-demux-header.patch \
             file://0002-fix-mpegts.patch \
             file://0003-allow-to-choose-rtmp-impl-at-runtime.patch \
@@ -13,6 +15,40 @@ SRC_URI += "file://0001-makefile-add-demux-header.patch \
             file://0012-dxva2.patch \
             file://0013-add-av_stream_get_first_dts-for-chromium.patch \
             file://ffmpeg_ac4.patch \
+            \
+            file://0014-added-debug-logs-for-multiple-decryption-keys.patch \
+            file://0015-added-support-for-parsing-cenc-key-s-from-MPD-playli.patch \
+            file://0016-avformat-dashdec-don-t-reload-manifest-often-then-ne.patch \
+            file://0017-avformat-dashdec-fixed-subtitles-segments-update.patch \
+            file://0018-avformat-dashdec-don-t-read-new-segments-too-fast-to.patch \
+            file://0019-dashdec-use-min-buffer-time-when-selecting-start-off.patch \
+            file://0020-dashdec-improved-handling-manifests-with-one-segment.patch \
+            file://0021-dashdec-fixed-proper-segment-number-calculation.patch \
+            file://0022-dashdec-ensure-that-pts-always-starts-from-zero.patch \
+            file://0023-dashdec-set-optimal-http-settings-based-on-media-typ.patch \
+            file://0024-dashdec-don-t-skip-first-segment.patch \
+            file://0025-dashdec-fix-integer-overflow-by-seeking.patch \
+            file://0026-dashdec-added-startover-attribute-to-manifest.patch \
+            file://0027-dashdec-check-borders-when-seeking-in-live-mode.patch \
+            file://0028-dashdec-fixed-splitted-subtitles.patch \
+            file://0029-dashdec-fixed-playback-of-some-live-streams.patch \
+            file://0030-decryption-key-extention.patch \
+            file://0031-ffmpeg-ext-dashdec-a-SegmentTemplate-with-a-duration.patch \
+            file://0032-avformat-dashdec-explicit-http-options-for-byte-rang.patch \
+            file://0033-avformat-dashdec-common-live-start-point-and-time-ba.patch \
+            file://0034-avformat-dashdec-reuse-HTTP-connections-and-follow-C.patch \
+            file://0035-avformat-dashdec-keep-the-live-position-across-manif.patch \
+            file://0036-added-possibility-to-set-decryption-keys-directly-in.patch \
+            file://0038-options-to-replace-parts-of-key-uri-in-HLS.patch \
+            file://0039-fixed-parsing-webvtt-with-STYLE-and-REGION-block.patch \
+            file://0041-FFmpeg-devel-v2-1-2-avformat-webvttdec-Add-support-f.patch \
+            file://0042-fixed-segfault-in-hls-subtitle-handling.patch \
+            file://0043-avformat-hls-don-t-use-byterange-when-loading-subtit.patch \
+            file://0044-webvttdec-option-to-insert-fake-subtitle-at-the-end.patch \
+            file://0045-subtitles-fixed-subtitle-search-after-seek.patch \
+            file://0046-hls-improved-handling-of-event-type-playlist.patch \
+            file://0048-avformat-hls-resync-to-the-live-edge-after-a-media-s.patch \
+            file://0049-avformat-pass-tls_verify-on-to-the-connections-of-HL.patch \
             "
 
 PACKAGECONFIG:append = " gpl libbluray dav1d libfreetype librtmp libxml2 openssl x264 x265 srt"
