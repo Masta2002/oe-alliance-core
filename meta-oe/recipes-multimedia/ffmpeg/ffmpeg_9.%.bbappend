@@ -49,6 +49,7 @@ SRC_URI += "file://0001-makefile-add-demux-header.patch \
             file://0046-hls-improved-handling-of-event-type-playlist.patch \
             file://0048-avformat-hls-resync-to-the-live-edge-after-a-media-s.patch \
             file://0049-avformat-pass-tls_verify-on-to-the-connections-of-HL.patch \
+            file://0050-hls-added-support-for-EXT-X-DISCONTINUITY.patch \
             "
 
 PACKAGECONFIG:append = " gpl libbluray dav1d libfreetype librtmp libxml2 openssl x264 x265 srt"
