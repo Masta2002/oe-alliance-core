@@ -52,6 +52,8 @@ SRC_URI += "file://0001-makefile-add-demux-header.patch \
             file://0050-hls-added-support-for-EXT-X-DISCONTINUITY.patch \
             file://0051-avformat-hls-recheck-the-discard-flags-during-playba.patch \
             file://0052-avformat-dashdec-align-a-representation-switched-in-.patch \
+            file://0053-fftools-ffmpeg-stream-specifiers-can-select-streams-.patch \
+            file://0054-avformat-dashdec-the-http-options-of-a-segment-only-.patch \
             "
 
 PACKAGECONFIG:append = " gpl libbluray dav1d libfreetype librtmp libxml2 openssl x264 x265 srt"
